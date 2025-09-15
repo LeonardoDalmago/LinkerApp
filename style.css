@@ -1,0 +1,22 @@
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.input-underline {
+  border-bottom-width: 1.5px;
+  border-bottom-color: #cbd5e1;
+  padding-bottom: 0.25rem;
+  outline-offset: 2px;
+  transition: border-color 0.3s ease;
+}
+.input-underline:focus {
+  border-bottom-color: #6366f1;
+}
+
+.eye-btn {
+  cursor: pointer;
+}
+
+.btn-gradient {
+  background: linear-gradient(90deg, #3bcaf7 0%, #9b4dff 100%);
+}

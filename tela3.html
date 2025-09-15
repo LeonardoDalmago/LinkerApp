@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Perfil - Neymar da Silva</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body {
+    background-color: #2d2d2d;
+    color: #f9fafb;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background-color: #2d2d2d;
+  }
+  header button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+  }
+  header button.active {
+    background-color: #3a3a3a;
+    border-radius: 50%;
+    padding: 0.4rem;
+    box-shadow: 0 0 10px rgba(163, 230, 53, 0.7); /* glow verde */
+  }
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    flex: 1;
+  }
+  .profile img {
+    width: 130px;
+    height: 130px;
+    border-radius: 9999px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  .actions {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1rem 0;
+  }
+  .actions button {
+    background-color: #3a3a3a;
+    border: none;
+    border-radius: 50%;
+    padding: 0.8rem;
+    cursor: pointer;
+  }
+  .actions button:hover {
+    background-color: #4a4a4a;
+  }
+  .info {
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+  .info h1 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+  }
+  .info p {
+    font-size: 0.9rem;
+    color: #d1d5db;
+    margin: 0.5rem 0;
+  }
+  .info .experiencias {
+    font-size: 0.85rem;
+    text-align: left;
+    max-width: 280px;
+    margin: 0.5rem auto;
+    color: #f3f4f6;
+  }
+  .info .experiencias strong {
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <button class="active" aria-label="Perfil">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 15c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0z" />
+      </svg>
+    </button>
+
+    <a href="tela1.html">
+      <button aria-label="Clipboard">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V7a2 2 0 012-2h3.5a1.5 1.5 0 001.5-1.5V3h4v.5A1.5 1.5 0 0017.5 5H21a2 2 0 012 2v12a2 2 0 01-2 2z" />
+        </svg>
+      </button>
+    </a>
+    <a href="tela2.html">
+      <button aria-label="Notificações">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6 6 0 10-12 0v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+        </svg>
+      </button>
+    </a>
+  </header>
+  <section class="profile">
+    <img src="https://static1.purepeople.com.br/uploads/a0/14/0e/b7/706dc57fa79c6be8-580x0-1.jpeg" alt="Foto de perfil" />
+
+    <div class="actions">
+      
+      <button aria-label="Editar">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L12.828 15H9v-3.828l8.586-8.586z" />
+        </svg>
+      </button>
+      <button aria-label="Camera">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h2l2-3h10l2 3h2v13H3V7z" />
+          <circle cx="12" cy="13" r="4" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="info">
+      <h1>Neymar da Silva</h1>
+      <p>Estudante de Análise e desenvolvimento de sistemas</p>
+      <div class="experiencias">
+        <strong>Experiências:</strong>
+        - Desenvolvedor Web Trainee (2024-aberto)<br>
+        - Traficante (2020-2024)<br>
+        - Auxiliar administrativo (2018-2020)
+      </div>
+    </div>
+  </section>
+</body>
+</html>

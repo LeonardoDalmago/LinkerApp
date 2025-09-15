@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lista de Mensagens</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body {
+    background-color: #1f1f1f;
+    color: #d1d5db;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+  .top-bar {
+    background-color: #292929;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid #333;
+  }
+  .top-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #9ca3af;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    position: relative;
+  }
+  .top-bar button.active {
+    color: #10b981;
+  }
+  .top-bar button.active .icon-circle {
+    background-color: #10b981;
+    box-shadow: 0 0 12px 2px #10b981cc;
+  }
+  .icon-circle {
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 0.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .icon {
+    stroke-width: 2.5;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+  }
+  main {
+    padding: 1rem 0;
+  }
+  .message-list {
+    list-style: none;
+    margin: 0;
+    padding: 0 1rem;
+  }
+  .message-item {
+    display: flex;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #333;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  .message-item:hover {
+    background-color: #111;
+  }
+  .avatar-wrapper {
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 9999px;
+    object-fit: cover;
+    border: 1.5px solid #333;
+  }
+  .message-content {
+    flex-grow: 1;
+  }
+  .message-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2px;
+  }
+  .name-role {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #f3f4f6;
+  }
+  .time {
+    font-size: 0.75rem;
+    color: #6b7280;
+    font-weight: 500;
+  }
+  .message-text {
+    font-size: 0.875rem;
+    color: #9ca3af;
+    line-height: 1.3;
+  }
+</style>
+</head>
+<body>
+  <header class="top-bar" role="navigation" aria-label="Menu superior">
+    <a href="tela3.html">
+        <button aria-label="Perfil" type="button">
+          <div class="icon-circle" aria-hidden="true">
+            <svg class="icon" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="7" r="4"></circle>
+              <path d="M5.5 20a6.5 6.5 0 0 1 13 0"></path>
+            </svg>
+          </div>
+        </button>
+    </a>
+    <a href="tela1.html">
+        <button aria-label="Tarefas" type="button">
+          <div class="icon-circle" aria-hidden="true">
+            <svg class="icon" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="9" y="4" width="6" height="2" rx="1"></rect>
+              <rect x="3" y="8" width="18" height="14" rx="2"></rect>
+              <line x1="9" y1="16" x2="15" y2="16"></line>
+              <line x1="9" y1="12" x2="15" y2="12"></line>
+            </svg>
+          </div>
+        </button>
+    </a>
+    <button class="active" aria-label="Mensagens" type="button">
+      <div class="icon-circle" aria-hidden="true">
+        <svg class="icon" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20 2H4a2 2 0 0 0-2 2v16l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"></path>
+        </svg>
+      </div>
+    </button>
+  </header>
+
+  <main>
+    <ul class="message-list" role="list">
+      <a href="tela4.html">
+        <li class="message-item" tabindex="0" aria-label="Mensagem de Denilson, RH da Amazon Shop LTDA, há 1 minuto. Marcação para entrevista amanha às 20h">
+          <div class="avatar-wrapper">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsWve4JUtPy4ySxuKAcCe0esCI3_2XVMp94vM87NnraTE1zaMVXbTL1aG5WrIdTkHllEg&usqp=CAU"
+              alt=""
+              class="avatar"
+              onerror="this.onerror=null;this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3e902453-2162-4944-8e0b-ef29766756a1.png';"
+            />
+          </div>
+          <div class="message-content">
+            <div class="message-header">
+              <span class="name-role">Denilson - RH of Amazon Shop LTDA</span>
+              <time class="time" datetime="PT1M">1 min</time>
+            </div>
+            <p class="message-text">Marcaram a "entrevista" amanha às 20h</p>
+          </div>
+        </li>
+      </a>
+
+      <li class="message-item" tabindex="0" aria-label="Mensagem de Ronaldo de Assis, CEO da Gole LTDA, há 10 minutos. Quando ficaria disponível para a entrevista?">
+        <div class="avatar-wrapper">
+          <img
+            src="https://conteudo.imguol.com.br/2012/06/21/ronaldinho-gaucho-mostra-bom-humor-durante-entrevista-coletiva-no-atletico-mg-2162012-1340315138590_300x300.jpg"
+            alt=""
+            class="avatar"
+            onerror="this.onerror=null;this.src='https://placehold.co/48x48/111111/cccccc?text=No+Img';"
+          />
+        </div>
+        <div class="message-content">
+          <div class="message-header">
+            <span class="name-role">Ronaldo de Assis - CEO of Gole LTDA</span>
+            <time class="time" datetime="PT10M">10 min</time>
+          </div>
+          <p class="message-text">Quando ficaria disponível para a 'entrevista' ?</p>
+        </div>
+      </li>
+
+      <li class="message-item" tabindex="0" aria-label="Mensagem de Bruno Cortes, RH do Gremio FBPA, há 22 minutos. Você é do Gremio? Importante para a vaga!">
+        <div class="avatar-wrapper">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlJBHJ7vU6Qdk0vJV28gW_umC36q5oNwCNHw&s"
+            alt=""
+            class="avatar"
+            onerror="this.onerror=null;this.src='https://placehold.co/48x48/111111/cccccc?text=No+Img';"
+          />
+        </div>
+        <div class="message-content">
+          <div class="message-header">
+            <span class="name-role">Bruno Cortes - RH of Gremio FBPA</span>
+            <time class="time" datetime="PT22M">22 min</time>
+          </div>
+          <p class="message-text">Você é do Gremio? Importante para a vaga!</p>
+        </div>
+      </li>
+
+      <li class="message-item" tabindex="0" aria-label="Mensagem de Rodinei, estagiário do Gole LTDA, há 27 minutos. Não pega trampo aqui não pai, Ronaldinho não paga">
+        <div class="avatar-wrapper">
+          <img
+            src="https://s2-ge.glbimg.com/32gTXiswr1t_IzYvPPxEfwI-B1U=/0x0:2048x1365/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2022/E/I/0CjAE5SwG6x8N73uEmBQ/agenciacorinthians-foto-46355.jpg"
+            alt=""
+            class="avatar"
+            onerror="this.onerror=null;this.src='https://placehold.co/48x48/111111/cccccc?text=No+Img';"
+          />
+        </div>
+        <div class="message-content">
+          <div class="message-header">
+            <span class="name-role">Rodinei - Estagiário of Gole LTDA</span>
+            <time class="time" datetime="PT27M">27 min</time>
+          </div>
+          <p class="message-text">Não pega trampo aqui não pai, Ronaldinho não paga</p>
+        </div>
+      </li>
+
+      <li class="message-item" tabindex="0" aria-label="Mensagem de Marinho, RH do Banco Itaú, há 58 minutos. Não sabia.">
+        <div class="avatar-wrapper">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Marinho.jpg/250px-Marinho.jpg"
+            alt=""
+            class="avatar"
+            onerror="this.onerror=null;this.src='https://placehold.co/48x48/111111/cccccc?text=No+Img';"
+          />
+        </div>
+        <div class="message-content">
+          <div class="message-header">
+            <span class="name-role">Marinho - RH of Banco Itaú</span>
+            <time class="time" datetime="PT58M">58 min</time>
+          </div>
+          <p class="message-text">Não sabia.</p>
+        </div>
+      </li>
+
+      <li class="message-item" tabindex="0" aria-label="Mensagem de Valdivia Santos, CEO da TNT Energi, há 48 minutos. Troca o foto e está contratado!">
+        <div class="avatar-wrapper">
+          <img
+            src="https://s2.glbimg.com/StvfVZu7yJySHRpRtPiPa03eSH0=/0x0:2000x1131/690x390/s.glbimg.com/es/ge/f/original/2016/11/27/img_8124_psQZ5Sk.jpg"
+            alt="Foto circular de Valdivia Santos, mulher adulta, pele clara, cabelos loiros, expressão confiante e amigável, fundo desfocado em laranja suave"
+            class="avatar"
+            onerror="this.onerror=null;this.src='https://placehold.co/48x48/111111/cccccc?text=No+Img';"
+          />
+        </div>
+        <div class="message-content">
+          <div class="message-header">
+            <span class="name-role">Valdivia Santos - CEO of TNT Energi</span>
+            <time class="time" datetime="PT48M">48 min</time>
+          </div>
+          <p class="message-text">Troca o foto e está contratado!</p>
+        </div>
+      </li>
+    </ul>
+  </main>
+</body>
+</html>

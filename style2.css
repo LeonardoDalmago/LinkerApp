@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  color: white;
+  background-color: #000;
+}
+
+.profile-screen {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: url('https://f.i.uol.com.br/fotografia/2022/03/15/1647391655623133a7d7d55_1647391655_3x2_md.jpg') 
+              center center / cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 15px;
+}
+
+/* Ícones topo */
+.top-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon {
+  background: rgba(0,0,0,0.4);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icon svg {
+  fill: white;
+  width: 20px;
+  height: 20px;
+}
+
+.center-icon {
+  background-color: #7C9254;
+  width: 48px;
+  height: 48px;
+}
+
+
+.profile-info {
+  position: absolute;
+  bottom: 100px; 
+  left: 15px;
+  right: 15px;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.name {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.distance {
+  font-size: 14px;
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.distance svg {
+  width: 15px;
+  height: 15px;
+  fill: white;
+}
+
+.title, .description {
+  font-size: 14px;
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.arrow {
+  width: 12px;
+  height: 12px;
+  fill: white;
+}
+
+
+.bottom-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px; 
+  margin-top: 20px;
+}
+
+.action-button {
+  background: #4b521f;     
+  border: 2px solid #fff;  
+  border-radius: 50%;      
+  width: 55px;
+  height: 55px;
+  color: white;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.3s;
+}

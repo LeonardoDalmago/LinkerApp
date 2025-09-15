@@ -1,0 +1,94 @@
+:root{
+  --bg:#f3f4f6;
+  --card:#ffffff;
+  --accent:#2b6cb0;
+  --muted:#6b7280;
+  --radius:12px;
+}
+
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{
+  margin:0;
+  font-family:Inter,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+  background:var(--bg);
+  color:#111827;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding:24px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:100vh;
+}
+
+.page{
+  width:100%;
+  max-width:420px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:18px;
+}
+.brand .logo{
+  width:56px;
+  height:56px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#111827,#2b6cb0);
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  font-size:18px;
+}
+
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:0 6px 22px rgba(15,23,42,0.08);
+  padding:20px;
+}
+
+.form{display:flex;flex-direction:column;gap:12px}
+.form h2{margin:0 0 4px 0;font-size:20px}
+label{font-size:13px;color:var(--muted);margin-top:8px}
+input[type="email"],input[type="password"]{
+  width:100%;
+  padding:12px 14px;
+  border-radius:8px;
+  border:1px solid #e6e7eb;
+  font-size:15px;
+  outline:none;
+}
+input:focus{box-shadow:0 0 0 4px rgba(59,130,246,0.08);border-color:var(--accent)}
+
+.password-row{display:flex;gap:8px;align-items:center}
+.password-row button{
+  padding:9px 10px;border-radius:8px;border:1px solid #e6e7eb;background:#fff;cursor:pointer;
+}
+
+.actions{display:flex;align-items:center;justify-content:space-between;margin-top:6px}
+.actions .link{font-size:13px;color:var(--accent);text-decoration:none}
+.actions button{
+  background:var(--accent);
+  color:white;
+  border:none;
+  padding:10px 14px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+#message{margin-top:8px;font-size:14px;color:#065f46;min-height:20px}
+
+.foot{margin-top:14px;text-align:center;color:var(--muted);font-size:13px}
+
+@media (max-width:420px){
+  body{padding:12px}
+  .page{max-width:100%}
+  .brand .logo{width:48px;height:48px;font-size:16px}
+}
